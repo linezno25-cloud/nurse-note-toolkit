@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>購入者限定特典 3点セット｜現役看護師 lineon</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --mint:#A8D8C8;
+  --mint-light:#E8F5F0;
+  --mint-mid:#7BC4B0;
+  --peach:#F4A69A;
+  --peach-light:#FEF0EE;
+  --text:#1a1a1a;
+  --text-sub:#555;
+  --text-muted:#888;
+  --bg:#fafafa;
+  --surface:#fff;
+  --border:#e8e8e8;
+  --border-strong:#d0d0d0;
+  --radius:8px;
+}
+body{background:var(--bg);color:var(--text);font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,sans-serif;line-height:1.7;min-height:100vh}
+.page{max-width:680px;margin:0 auto;padding:24px 16px 60px}
+
+/* header */
+.site-header{padding:20px 0 24px;border-bottom:1px solid var(--border);margin-bottom:24px}
+.site-header .label{font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--mint-mid);text-transform:uppercase;margin-bottom:6px}
+.site-header h1{font-size:20px;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:4px}
+.site-header .sub{font-size:13px;color:var(--text-sub)}
+
+/* tabs */
+.tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.tab{flex:1;min-width:100px;padding:10px 8px;font-size:12px;font-weight:600;border-radius:var(--radius);border:1.5px solid var(--border-strong);background:var(--surface);color:var(--text-sub);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;line-height:1.3;transition:all .15s}
+.tab svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tab:hover{border-color:var(--mint-mid);color:var(--text)}
+.tab.on{border-color:var(--mint-mid);background:var(--mint-light);color:#0F6E56;border-width:2px}
+@media(min-width:480px){.tab{flex-direction:row;padding:10px 16px;font-size:13px;justify-content:center}}
+
+/* panel */
+.panel{display:none}.panel.on{display:block}
+.panel-desc{font-size:13px;color:var(--text-sub);margin-bottom:16px;line-height:1.7}
+
+/* card */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:10px}
+.card-head{width:100%;padding:13px 16px;display:flex;align-items:center;gap:10px;background:none;border:none;cursor:pointer;text-align:left;min-height:50px}
+.card-head:hover{background:#fafafa}
+.card-title{font-size:13px;font-weight:600;color:var(--text);flex:1;line-height:1.4}
+.card-body{display:none;padding:0 16px 16px;border-top:1px solid var(--border)}
+.chevron{width:16px;height:16px;stroke:var(--text-muted);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;transition:transform .2s}
+.open .chevron{transform:rotate(180deg)}
+
+/* badge */
+.badge{font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0}
+.b-accent{background:#E8F5F0;color:#0F6E56}
+.b-green{background:#EAF3DE;color:#3B6D11}
+.b-purple{background:#EEEDFE;color:#3C3489}
+.b-amber{background:#FAEEDA;color:#633806}
+
+/* fields */
+.fields{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
+.pill{font-size:11px;padding:3px 8px;border-radius:20px;background:#f4f4f4;border:1px solid var(--border);color:var(--text-sub)}
+
+/* boxes */
+.ex-box{background:#f8f8f8;border-radius:var(--radius);padding:12px;margin-bottom:10px}
+.ex-label{font-size:11px;color:var(--text-muted);margin-bottom:4px;font-weight:600}
+.ex-text{font-size:13px;color:var(--text);line-height:1.7}
+.hint-box{display:flex;gap:8px;align-items:flex-start;border-radius:var(--radius);padding:9px 11px;margin-bottom:12px}
+.hint-box svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.hint-text{font-size:12px;line-height:1.6;margin:0}
+.h-mint{background:var(--mint-light);color:#0F6E56}
+.h-blue{background:#E6F1FB;color:#185FA5}
+.h-green{background:#EAF3DE;color:#3B6D11}
+
+/* copy btn */
+.copy-btn{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:9px 16px;border-radius:var(--radius);border:1.5px solid var(--border-strong);background:var(--surface);color:var(--text-sub);cursor:pointer;min-height:40px;transition:all .15s}
+.copy-btn:hover{border-color:var(--mint-mid);background:var(--mint-light);color:#0F6E56}
+.copy-btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* neta */
+.cat-head{width:100%;padding:13px 16px;display:flex;align-items:center;gap:10px;background:none;border:none;cursor:pointer;text-align:left;min-height:50px}
+.cat-head:hover{background:#fafafa}
+.cat-title{font-size:13px;font-weight:600;color:var(--text);flex:1}
+.cat-count{font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;background:var(--mint-light);color:#0F6E56;display:none;flex-shrink:0}
+.q-row{display:flex;align-items:flex-start;gap:12px;padding:11px 16px;border-top:1px solid var(--border);cursor:pointer;transition:background .1s}
+.q-row:hover{background:#fafafa}
+.q-row input{margin-top:3px;flex-shrink:0;width:16px;height:16px;cursor:pointer;accent-color:var(--mint-mid)}
+.q-text{font-size:13px;line-height:1.6;color:var(--text)}
+.q-row.checked{background:var(--mint-light)}
+.q-row.checked .q-text{color:#0F6E56}
+.total-badge{font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;background:var(--mint-light);color:#0F6E56;white-space:nowrap}
+
+/* sns */
+.sns-num{font-size:12px;font-weight:700;color:var(--text-muted);flex-shrink:0;min-width:26px}
+.tmpl-box{background:#f8f8f8;border-left:3px solid var(--mint-mid);padding:12px 14px;margin-bottom:10px;white-space:pre-line;font-size:13px;line-height:1.9;color:var(--text)}
+
+/* footer */
+.footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--border);text-align:center}
+.footer p{font-size:12px;color:var(--text-muted);line-height:1.8}
+
+@media(min-width:560px){
+  .card-title{font-size:14px}
+  .ex-text{font-size:14px}
+  .q-text{font-size:13px}
+  .site-header h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="site-header">
+  <p class="label">購入者限定特典</p>
+  <h1>note収益化ツールキット</h1>
+  <p class="sub">現役看護師 lineon｜3点セット</p>
+</header>
+
+<div class="tabs">
+  <button class="tab on" onclick="sw(0)" id="t0">
+    <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+    特典① タイトル
+  </button>
+  <button class="tab" onclick="sw(1)" id="t1">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+    特典② ネタ出し
+  </button>
+  <button class="tab" onclick="sw(2)" id="t2">
+    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    特典③ SNS投稿
+  </button>
+</div>
+
+<div class="panel on" id="p0">
+  <p class="panel-desc">（　）に自分のテーマを入れるだけでタイトルが完成します。タップして使い方を確認してください。</p>
+  <div id="tlist"></div>
+</div>
+
+<div class="panel" id="p1">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:12px">
+    <p class="panel-desc" style="margin:0">気になった質問にチェックを入れてネタ帳として使ってください。</p>
+    <span class="total-badge" id="qc">0/100</span>
+  </div>
+  <div id="nlist"></div>
+</div>
+
+<div class="panel" id="p2">
+  <p class="panel-desc">＿＿に自分の内容を入れてそのまま使えます。投稿タイミングも確認してください。</p>
+  <div id="slist"></div>
+</div>
+
+<footer class="footer">
+  <p>現役看護師 lineon<br>Threads・note で看護師の経験を言葉にする発信をしています</p>
+</footer>
+
+</div>
+
+<script>
+const T=[
+  {id:1,type:"悩みを言葉にする型",bc:"b-accent",tmpl:"（　）で（　）なあなたへ",ex:"新人指導がうまくいかなくて、もう限界なあなたへ",fields:["状況・役割","今の気持ち"],hint:"読者が「これ私のことだ」と感じる悩みをそのまま入れる",hc:"h-mint"},
+  {id:2,type:"悩みを言葉にする型",bc:"b-accent",tmpl:"（　）年目なのに（　）、それって普通ですか",ex:"3年目なのにまだ自信が持てない、それって普通ですか",fields:["年数","自分を責めていること"],hint:"「普通ですか」は共感を引き出す最強の問いかけ",hc:"h-mint"},
+  {id:3,type:"悩みを言葉にする型",bc:"b-accent",tmpl:"（　）に（　）と思ったことがある（　）へ",ex:"夜勤明けに「もう辞めたい」と思ったことがある看護師へ",fields:["場面・タイミング","感情・思ったこと","読者層"],hint:"具体的な場面を入れると刺さりやすい",hc:"h-mint"},
+  {id:4,type:"before→after型",bc:"b-green",tmpl:"（　）だった私が、（　）になるまで",ex:"指導が怖かった私が、新人に「ありがとう」と言われるまで",fields:["過去のbefore状態","after状態・出来事"],hint:"beforeが読者の今に近いほど引力が強くなる",hc:"h-green"},
+  {id:5,type:"before→after型",bc:"b-green",tmpl:"（　）と思っていた（　）が、（　）した話",ex:"辞めようと思っていた看護師が、夜勤なしで収入を増やした話",fields:["否定的な状態","読者層","after状態"],hint:"「話」で終わると体験談感が出て読まれやすい",hc:"h-green"},
+  {id:6,type:"before→after型",bc:"b-green",tmpl:"スキ（　）・購入ゼロだった私が（　）になった理由",ex:"スキ8・購入ゼロだった私がnoteで月1万円稼げるようになった理由",fields:["最初のスキ数","達成したこと"],hint:"具体的な数字を入れると信頼性が一気に上がる",hc:"h-green"},
+  {id:7,type:"共犯者をつくる型",bc:"b-purple",tmpl:"（　）にしかわからない、（　）の正体",ex:"看護師にしかわからない、夜勤明けの頭の中",fields:["読者層・職種","テーマ・感情"],hint:"「にしかわからない」が仲間意識を生む",hc:"h-blue"},
+  {id:8,type:"共犯者をつくる型",bc:"b-purple",tmpl:"現役（　）が本音で語る、（　）の本当のこと",ex:"現役ICU看護師が本音で語る、急変対応の本当の怖さ",fields:["役職・経歴","テーマ"],hint:"「本音」「本当の」が信頼感を高める",hc:"h-blue"},
+  {id:9,type:"キーワードを伏せる型",bc:"b-amber",tmpl:"（　）を救った、たった（　）つのこと",ex:"プリセプターを救った、たった一つの言葉",fields:["救われた対象・読者層","数字（一・二・三）"],hint:"「何か」を伏せることで続きが読みたくなる",hc:"h-green"},
+  {id:10,type:"キーワードを伏せる型",bc:"b-amber",tmpl:"（　）が突然変わった日、私がしたことは（　）だった",ex:"新人が突然変わった日、私がしたことはたった一つだった",fields:["変わったもの・人","「たった一つ」など数量表現"],hint:"答えを見せずに「続きが気になる」状態を作る",hc:"h-green"}
+];
+
+const N=[
+  {cat:"新人のころ知りたかった",color:"#0F6E56",bg:"#E8F5F0",qs:["採血が怖くなくなったきっかけは？","申し送りで先輩に詰められなくなったのはいつ頃？","急変対応で頭が真っ白にならなくなった理由は？","夜勤前の準備でやめてよかったこと・続けてよかったことは？","1年目のとき、一番怖かった処置は？","先輩との付き合い方で気づいたことは？","記録が早くなったきっかけは？","患者さんへの声かけで効果があった言葉は？","ナースコールの対応で学んだことは？","インシデントを起こしたとき、どう立ち直った？","同期と差がついたと感じた場面は？","リーダー業務を初めてやって気づいたことは？","カンファレンスで発言できるようになったきっかけは？","先輩に「成長したね」と言われたのはどんなとき？","教科書に載っていない現場のリアルなコツは？"]},
+  {cat:"しんどかった場面",color:"#993C1D",bg:"#FAECE7",qs:["新人に何度も同じ説明をして脱力した場面は？","患者さんに怒鳴られたとき、どんな気持ちだった？","夜勤明けに後輩に相談されて限界だと思ったのは？","先輩の一言が刺さって更衣室で動けなかった経験は？","「自分は向いていない」と思ったのはどんな瞬間？","プリセプターとして一番追い詰められたのはいつ？","急変対応のあとに一人で泣いたことはある？","患者さんを亡くして気持ちの整理がつかなかったのは？","休憩が全く取れなかった夜勤で何を考えていた？","同期に差をつけられて焦ったのはどんなとき？","師長や先輩に理不尽だと感じた場面は？","「もう辞めたい」と思ったきっかけになった出来事は？","一番消耗したのはどんな患者さんとの関わり？","チームの雰囲気が悪くて一番しんどかったのはいつ？","プライベートに仕事が入ってきてしんどかったのはいつ？"]},
+  {cat:"看護師あるある",color:"#3C3489",bg:"#EEEDFE",qs:["ポケットの中身が増えすぎて困った経験は？","休憩中に無意識にモニターを確認していたことはある？","プライベートで人の血管を見てしまった経験は？","夜勤明けの帰り道、変な感覚になったことはある？","患者さんに年齢を当てられたとき、どんな気持ち？","スクラブ選びで一番重視することは？","食事が3分以内で終わった経験はある？","夜勤中に時間の感覚がなくなったことはある？","看護師だとわかった瞬間に頼られすぎた経験は？","他の職種と話が合わなくて困ったことはある？","患者さんの家族に感謝された瞬間はどんなとき？","看護師になってよかったと感じるのはどんな瞬間？","夜勤が終わった瞬間の解放感をどう表現する？","ナースコールの音がトラウマになった経験はある？","休日でも病院のそばを通ると気になることはある？"]},
+  {cat:"副業・note発信",color:"#633806",bg:"#FAEEDA",qs:["noteを始めたきっかけは？","初めて記事が売れたときの気持ちは？","看護師の経験が記事になると気づいた瞬間は？","SNSで一番反応があった投稿はどんな内容？","副業をすることへの後ろめたさはあった？","書き続けるために工夫していることは？","ネタ切れになりそうになったとき、どう解決した？","看護師×発信で一番のやりがいは？","同僚に副業していることを話したことはある？","夜勤明けに記事を書いた経験はある？","フォロワーに感謝されたのはどんな内容のとき？","これから発信を始める看護師に伝えたいことは？","収益化できたとき、一番最初にやったことは？","発信をやめたくなったとき、どう乗り越えた？","看護師だからこそ書けると思うテーマは？"]},
+  {cat:"キャリア・転職",color:"#185FA5",bg:"#E6F1FB",qs:["転職を考えたきっかけは？","今の職場を辞める決断ができたのはなぜ？","転職して一番よかったと感じることは？","転職先を選ぶときに一番重視したことは？","転職エージェントを使って気づいたことは？","部署異動を経験して変わったことは？","クリニックと病院の違いで驚いたことは？","夜勤なしの生活に変えて気づいたことは？","専門資格を取ったきっかけと変化は？","管理職になって気づいた現場との違いは？","訪問看護に転職して驚いたことは？","復職するときに一番不安だったことは？","今の自分が1年目の自分に伝えたいことは？","看護師を続けてよかったと思う瞬間は？","今後のキャリアで挑戦したいことは？"]},
+  {cat:"患者・家族との関わり",color:"#72243E",bg:"#FBEAF0",qs:["患者さんに言われて一番嬉しかった言葉は？","家族対応で一番難しかった場面は？","認知症の患者さんとの関わりで学んだことは？","ターミナルケアで感じたことは？","患者さんとの信頼関係が築けたと感じた瞬間は？","小児看護で一番心に残っているエピソードは？","ハラスメントを受けたとき、どう対処した？","家族から感謝の手紙をもらった経験はある？","患者さんが退院した後も気になったことはある？","看護師として一番誇りに思った瞬間はいつ？"]},
+  {cat:"職場の人間関係",color:"#27500A",bg:"#EAF3DE",qs:["怖い先輩との付き合い方で工夫したことは？","チームワークがうまくいった職場はどんな職場？","医師との関係で苦労した場面は？","他職種と連携してうまくいった経験は？","職場の雰囲気が最悪だったとき、どう乗り越えた？","新人に言ってよかった言葉・言わなければよかった言葉は？","師長に評価されたのはどんな行動のとき？","休憩室でのグチ話、参加する？距離を置く？","同期と助け合えたのはどんな場面？","職場で一番信頼できた先輩の特徴は？"]}
+];
+
+const S=[
+  {id:1,pat:"①｜あるある→note誘導",tim:"共感リプライが集まったら翌日にリンクを置く",tmpl:"＿＿という経験、ありませんか。\n\n私も＿＿のとき、＿＿という気持ちになっていました。\n\nでも最近、＿＿な理由があることがわかって、少し楽になりました。\n\n同じ気持ちの方が多かったので、私が試してよかったことをnoteにまとめました。",pt:"リンクは投稿本文に入れず、翌日のリプライで置くのがコツ"},
+  {id:2,pat:"②｜結論先出し→noteへ",tim:"投稿単体でも価値があるものにしてからリンクを置く",tmpl:"＿＿について、私は＿＿だと思っています。\n\n理由は＿＿だからです。\n\n「そんなこと？」と思うかもしれないけど、これを意識するだけで＿＿が変わります。\n\n詳しい理由と、実際に私がやってみたことをnoteにまとめています。",pt:"答えを見せた上で「なぜそうなのか」をnoteに置くのがコツ"},
+  {id:3,pat:"③｜実績先出し→noteへ",tim:"「どうやったんですか？」リプライが来てからリンクを置く",tmpl:"＿＿を始めて＿＿ヶ月。\n\n最初は＿＿でしたが、試行錯誤して＿＿できるようになりました。\n\nやってきたことを全部まとめたnoteを出しました。\n\n同じ状況から始めたい方の参考になれば。",pt:"数字を見せることへの抵抗をなくすのがこのパターンの鍵"},
+  {id:4,pat:"④｜問いかけ→共感→noteへ",tim:"コメント・リプライが来たタイミングでリンクを追加",tmpl:"＿＿なとき、あなたはどうしていますか？\n\n私は以前、＿＿していました。でもそれが＿＿な結果を生んでいたと気づきました。\n\n今は＿＿するようにしたら、＿＿が変わりました。\n\n同じ悩みを持つ方のために、詳しくnoteに書きました。",pt:"問いかけで始めると自然にリプライが集まる"},
+  {id:5,pat:"⑤｜感情の吐き出し→noteへ",tim:"感情が高いタイミングで書いた投稿に自然にリンクを添える",tmpl:"今日、＿＿があった。\n\n正直、＿＿という気持ちになった。\n\nでも、こういう気持ちになるのは＿＿だからだと最近わかった。\n\n同じ気持ちになったことがある人に、伝えたいことをnoteに書きました。",pt:"推敲しすぎず、感情のままに書いた投稿が一番刺さる"},
+  {id:6,pat:"⑥｜before/after比較型",tim:"実績が出たタイミングで投稿してリンクを置く",tmpl:"【＿＿する前 vs した後】\n\nbefore：＿＿\nafter：＿＿\n\n変えたのは＿＿だけ。\n\n何を変えたかをnoteに書きました。",pt:"before/afterの数字や状態を具体的に書くほど刺さる"},
+  {id:7,pat:"⑦｜リスト投稿→noteへ",tim:"リスト投稿でいいねが集まったらnoteに誘導",tmpl:"＿＿な看護師の特徴3選\n\n① ＿＿\n② ＿＿\n③ ＿＿\n\nこれ、全部私が経験してきたことです。どうやって変わったかをnoteに書きました。",pt:"リスト投稿は拡散されやすいが、深掘りはnoteに置く"},
+  {id:8,pat:"⑧｜「知らないと損」型",tim:"情報系の投稿としてそのままリンクつきで投稿",tmpl:"＿＿を知らないと、＿＿で損し続けます。\n\n実は＿＿が理由です。\n\n知っておくだけで＿＿が変わります。詳しくnoteに書きました。",pt:"「知らないと損」は購買への緊張感を生む言葉"},
+  {id:9,pat:"⑨｜告白型",tim:"正直な気持ちを書いた投稿がバズったらnoteへ誘導",tmpl:"正直に言います。\n\n＿＿のとき、私は＿＿していました。\n\n今思えば＿＿だったと気づきます。\n\n同じことをしている人に届けたくて、noteに書きました。",pt:"正直さは最強の差別化。AIには書けない人間らしさが出る"},
+  {id:10,pat:"⑩｜シンプル誘導型（ファン向け）",tim:"フォロワーが育ってきたタイミングで使う",tmpl:"ずっと書きたかったことを、やっとnoteにまとめました。\n\nテーマは「＿＿」です。\n\n＿＿な方に読んでほしいです。",pt:"ファンができてからが一番効くシンプルな誘導"},
+  {id:11,pat:"⑪｜特典告知型",tim:"記事投稿当日または翌日に使う",tmpl:"新しいnoteを出しました。\n\n「＿＿」がテーマです。\n\n今だけ購入者に3つの特典をつけています。\n① ＿＿\n② ＿＿\n③ ＿＿\n\n＿＿な方にぜひ読んでほしいです。",pt:"特典を明記すると購買の背中を押しやすい"},
+  {id:12,pat:"⑫｜読者の声引用型",tim:"購入者からコメントが来たらすぐに投稿",tmpl:"noteを購入してくれた方から、こんなメッセージをいただきました。\n\n「＿＿」\n\nこういう言葉をもらうたびに、書いてよかったと思います。\n\n同じ状況の方に届けたくて作った記事です。もしよければ。",pt:"読者の声は最強の社会的証明。許可を得てから引用する"},
+  {id:13,pat:"⑬｜数字報告型",tim:"節目の数字が出たときに投稿",tmpl:"noteを出して＿＿日が経ちました。\n\nおかげさまで＿＿部売れました。\n\n「＿＿」というコメントをたくさんいただいています。\n\nまだ読んでいない方はぜひ。",pt:"販売数の報告が「売れている」という証拠になる"},
+  {id:14,pat:"⑭｜値上げ予告型",tim:"値上げの1〜3日前に投稿",tmpl:"＿＿部売れたので、noteの価格を＿＿円から＿＿円に値上げします。\n\n値上げは＿＿（曜日）の予定です。\n\nそれまでに読みたい方はお早めに。",pt:"値上げ予告は緊迫感を生み購買を加速させる"},
+  {id:15,pat:"⑮｜記事の一部公開型",tim:"記事の一番刺さる部分を切り取って投稿",tmpl:"noteにこんなことを書きました。\n\n「＿＿（記事の一部抜粋）」\n\n続きは記事で書いています。気になった方はぜひ。",pt:"一番感情が動く部分を切り取ると続きが読みたくなる"}
+];
+
+const qChecked={};
+const CHEVRON=`<svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>`;
+const INFO=`<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`;
+const COPY=`<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>`;
+const CHECK=`<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+
+function sw(i){
+  [0,1,2].forEach(j=>{
+    document.getElementById('t'+j).classList.toggle('on',j===i);
+    document.getElementById('p'+j).classList.toggle('on',j===i);
+  });
+}
+
+function tog(id){
+  const b=document.getElementById('cb'+id);
+  const h=document.getElementById('ch'+id);
+  const open=b.style.display==='block';
+  b.style.display=open?'none':'block';
+  h.classList.toggle('open',!open);
+}
+
+function cp(text,btnId){
+  navigator.clipboard.writeText(text).then(()=>{
+    const b=document.getElementById(btnId);
+    if(!b)return;
+    b.innerHTML=CHECK+' コピーしました';
+    b.style.borderColor='var(--mint-mid)';
+    b.style.background='var(--mint-light)';
+    b.style.color='#0F6E56';
+    setTimeout(()=>{
+      b.innerHTML=COPY+' テンプレートをコピー';
+      b.style.borderColor='';b.style.background='';b.style.color='';
+    },2000);
+  });
+}
+
+function toggleQ(ci,qi){
+  const k=`${ci}-${qi}`;
+  qChecked[k]=!qChecked[k];
+  const chk=document.getElementById(`qchk-${ci}-${qi}`);
+  const row=document.getElementById(`qrow-${ci}-${qi}`);
+  const txt=document.getElementById(`qtxt-${ci}-${qi}`);
+  if(chk)chk.checked=!!qChecked[k];
+  if(row)row.classList.toggle('checked',!!qChecked[k]);
+  if(txt)txt.style.color=qChecked[k]?N[ci].color:'';
+  const total=Object.values(qChecked).filter(Boolean).length;
+  const all=N.reduce((s,c)=>s+c.qs.length,0);
+  const el=document.getElementById('qc');
+  if(el)el.textContent=total+'/'+all;
+  const cc=document.getElementById(`cc-${ci}`);
+  if(cc){
+    const cnt=N[ci].qs.filter((_,qi2)=>qChecked[`${ci}-${qi2}`]).length;
+    cc.style.display=cnt>0?'inline':'none';
+    cc.textContent=cnt+'/'+N[ci].qs.length;
+    cc.style.background=N[ci].bg;
+    cc.style.color=N[ci].color;
+  }
+}
+
+function buildTitles(){
+  document.getElementById('tlist').innerHTML=T.map(t=>`
+<div class="card">
+<button class="card-head" id="ch${t.id}" onclick="tog(${t.id})">
+<span class="badge ${t.bc}">${t.type}</span>
+<span class="card-title">${t.tmpl}</span>
+${CHEVRON}
+</button>
+<div class="card-body" id="cb${t.id}">
+<p style="font-size:11px;color:var(--text-muted);margin:12px 0 4px;font-weight:600">入れる内容</p>
+<div class="fields">${t.fields.map((f,i)=>`<span class="pill">（　）${i+1}= ${f}</span>`).join('')}</div>
+<div class="ex-box"><p class="ex-label">記入例</p><p class="ex-text">${t.ex}</p></div>
+<div class="hint-box ${t.hc}">${INFO}<p class="hint-text">${t.hint}</p></div>
+<button class="copy-btn" id="ctb${t.id}" onclick="cp(T[${t.id-1}].tmpl,'ctb${t.id}')">${COPY} テンプレートをコピー</button>
+</div>
+</div>`).join('');
+}
+
+function buildNeta(){
+  document.getElementById('nlist').innerHTML=N.map((cat,ci)=>`
+<div class="card">
+<button class="cat-head" onclick="tog('n'+${ci})">
+<span style="font-size:16px;margin-right:2px">${['🌱','😔','😅','✏️','🛤️','👥','🤝'][ci]}</span>
+<span class="cat-title">${cat.cat}</span>
+<span id="cc-${ci}" class="cat-count" style="display:none"></span>
+${CHEVRON.replace('class="chevron"','class="chevron" id="chn'+ci+'"')}
+</button>
+<div class="card-body" id="cbn${ci}" style="padding:0">
+${cat.qs.map((q,qi)=>`
+<label class="q-row" id="qrow-${ci}-${qi}" onclick="toggleQ(${ci},${qi})">
+<input type="checkbox" id="qchk-${ci}-${qi}" onclick="event.stopPropagation()" onchange="toggleQ(${ci},${qi})" style="margin-top:3px;flex-shrink:0;width:16px;height:16px;cursor:pointer;accent-color:${cat.color}">
+<span class="q-text" id="qtxt-${ci}-${qi}">${q}</span>
+</label>`).join('')}
+</div>
+</div>`).join('');
+  N.forEach((_,ci)=>{
+    const el=document.getElementById('chn'+ci);
+    if(el){
+      const orig=document.getElementById('cbn'+ci).style.display;
+    }
+  });
+}
+
+function buildSns(){
+  document.getElementById('slist').innerHTML=S.map((t,idx)=>`
+<div class="card">
+<button class="card-head" id="chs${t.id}" onclick="tog('s'+${t.id})">
+<span class="sns-num">${String(t.id).padStart(2,'0')}</span>
+<span class="card-title">${t.pat}</span>
+${CHEVRON}
+</button>
+<div class="card-body" id="cbs${t.id}">
+<div class="hint-box h-blue" style="margin-top:12px">${INFO}<p class="hint-text">タイミング：${t.tim}</p></div>
+<p style="font-size:11px;color:var(--text-muted);margin:0 0 6px;font-weight:600">テンプレート</p>
+<div class="tmpl-box">${t.tmpl}</div>
+<div class="hint-box h-green">${INFO}<p class="hint-text">${t.pt}</p></div>
+<button class="copy-btn" id="csb${t.id}" onclick="cp(S[${idx}].tmpl,'csb${t.id}')">${COPY} テンプレートをコピー</button>
+</div>
+</div>`).join('');
+}
+
+function fixNetaToggle(){
+  N.forEach((_,ci)=>{
+    const orig=tog;
+    document.querySelector(`#cbn${ci}`);
+  });
+}
+
+const origTog=tog;
+function tog(id){
+  const bid='cb'+id;
+  const hid='ch'+id;
+  const b=document.getElementById(bid);
+  const h=document.getElementById(hid);
+  if(!b||!h)return;
+  const open=b.style.display==='block';
+  b.style.display=open?'none':'block';
+  h.classList.toggle('open',!open);
+}
+
+buildTitles();buildNeta();buildSns();
+</script>
+</body>
+</html>
